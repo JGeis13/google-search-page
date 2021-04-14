@@ -10,11 +10,67 @@
     <title>search - GOOGLE</title>
   </head>
   <body>
+    <div class="logo-container">
+      <img
+        src="https://www.google.com/logos/doodles/2021/151st-anniversary-of-the-metropolitan-museum-of-art-6753651837108733-s.png"
+        alt="logo"
+        class="logo"
+      />
+    </div>
+
     <!-- Header -->
-    <header></header>
+    <header>
+      <div class="inner-container">
+        <div class="searchbar">
+          <input type="text" value="build this webpage" />
+          <div class="icons">
+            <span class="material-icons">close</span>
+            <span class="material-icons">mic</span>
+            <span class="material-icons">search</span>
+          </div>
+        </div>
+        <nav>
+          <div class="result-type">
+            <a href="#" class="icon-box selected">
+              <span class="material-icons">search</span>
+              <span>All</span>
+            </a>
+            <a href="#" class="icon-box">
+              <span class="material-icons">feed</span>
+              <span>News</span>
+            </a>
+            <a href="#" class="icon-box">
+              <span class="material-icons">ondemand_video</span>
+              <span>Videos</span>
+            </a>
+            <a href="#" class="icon-box">
+              <span class="material-icons">location_on</span>
+              <span>Maps</span>
+            </a>
+            <a href="#" class="icon-box">
+              <span class="material-icons">sell</span>
+              <span>Shopping</span>
+            </a>
+            <a href="#" class="icon-box">
+              <span class="material-icons">more_vert</span>
+              <span>More</span>
+            </a>
+          </div>
+          <div class="settings">
+            <a href="#">Settings</a>
+            <a href="#">Tools</a>
+          </div>
+        </nav>
+      </div>
+    </header>
 
     <!-- Main -->
-    <section id="main"></section>
+    <section id="main">
+      <div class="inner-container">
+        <div class="about">About 139,000,000 results (0.57 seconds)</div>
+        <div class="search-results"></div>
+      </div>
+    </section>
 
     <!-- Related Searches -->
     <section id="related"></section>
@@ -22,7 +78,12 @@
     <!-- Suggested Alternatives -->
     <section id="suggested"></section>
 
+    <div class="pagination"></div>
+
     <!-- Footer -->
     <footer></footer>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

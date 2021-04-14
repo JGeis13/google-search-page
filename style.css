@@ -10,14 +10,6 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-  overflow-x: hidden;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -27,155 +19,238 @@ a:hover {
   text-decoration: underline;
 }
 
-/* HEADER */
+/************
+  CONTAINERS
+*************/
+
+.inner-container {
+  width: 660px;
+  min-width: 660px;
+  margin-left: 190px;
+}
+
+.logo-container {
+  margin-bottom: -44px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+/********** 
+  HEADER
+***********/
+
 header {
-  display: flex;
-  justify-content: space-between;
+  border-bottom: 1px solid var(--lightgrey);
 }
 
-header > div {
+header .inner-container > div {
   display: flex;
-  padding: 1rem;
+}
+
+/* Searchbar */
+header .searchbar {
+  display: flex;
   align-items: center;
-}
-
-header > div > a,
-header > div > img,
-header > div > span {
-  padding: 0 0.75rem;
-}
-
-header > div:nth-child(2) a {
-  font-size: 0.9rem;
-}
-
-header .circle {
-  width: 35px;
-  height: 35px;
-  background: rgb(194, 100, 194);
-  border-radius: 50%;
-  text-align: center;
-  color: white;
-  line-height: 35px;
-  font-size: 1.2rem;
-}
-
-header .apps-icon {
-  color: var(--grey);
-  font-size: 1.8rem;
-}
-
-/* Main Section */
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: -10rem;
-  padding-bottom: 2rem;
-}
-
-section > div,
-section > img {
-  margin: 1rem 0;
-}
-
-section .search-bar {
-  border: 1px solid lightgrey;
-  width: 500px;
-  border-radius: 30px;
-  display: flex;
   justify-content: space-between;
-  padding: 0.8rem;
-  color: var(--lightgrey);
+  padding: 0rem 1.2rem;
+  border-radius: 50px;
+  margin-left: -15px;
+  margin-right: -15px;
+  box-shadow: 0 0 10px var(--lightgrey);
 }
 
-section .search-bar:hover {
-  box-shadow: 0px 0px 7px var(--lightgrey);
+header .searchbar:hover {
+  box-shadow: 0 0 10px 2px var(--lightgrey);
 }
 
-section .search-bar input {
-  width: 100%;
+header .searchbar input {
   border: none;
-  padding: 0 1rem;
-  font-size: 1.2rem;
-}
-
-section .search-bar input:focus {
+  padding: 1rem 0rem;
+  font-size: 16px;
   outline: none;
+  flex-grow: 1;
 }
 
-section .btn-container button {
-  border: none;
-  background: rgb(238, 238, 238);
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  color: var(--grey);
-  border-radius: 3px;
-  margin: 0 5px;
-}
-
-section .btn-container button:hover {
-  box-shadow: 0px 0px 7px var(--lightgrey);
+header .searchbar .icons span {
   cursor: pointer;
+  padding: 0.4rem 0.25rem;
 }
 
-/* Footer */
+header .searchbar .icons span:first-child {
+  border-right: 1px solid var(--lightgrey);
+}
 
-footer {
+/* Navbar */
+header nav {
   display: flex;
-  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  width: 100%;
   justify-content: space-between;
-  background: rgb(238, 238, 238);
 }
 
-footer > div {
+header nav > div {
   display: flex;
   align-items: center;
-  padding: 1rem;
+  justify-content: space-between;
 }
 
-footer > div:first-child {
-  justify-content: flex-start;
-  min-width: 30%;
+header .icon-box {
+  display: flex;
+  align-items: center;
+  margin-right: 1.1rem;
+  color: var(--grey);
+  padding-bottom: 0.8rem;
 }
 
-footer > div:nth-child(2) {
-  justify-content: center;
+header .icon-box .material-icons {
+  font-size: 1.2rem;
+  padding-right: 0.3rem;
 }
 
-footer > div:nth-child(3) {
-  justify-content: flex-end;
-  min-width: 30%;
+header .icon-box.selected {
+  border-bottom: 2px solid rgb(1, 102, 225);
+  color: rgb(1, 102, 225);
 }
 
-footer > div > a {
-  padding: 0 1rem;
+header .settings a {
+  padding-left: 1rem;
+  padding-bottom: 0.8rem;
+  color: var(--grey);
 }
 
-/* Media Queries */
+/*****************
+ MAIN SECTION 
+*****************/
 
-@media (max-width: 1200px) {
-  footer > div:nth-child(2) {
-    order: -1;
-    width: 100vw;
-    justify-content: center;
-  }
+#main {
+  padding-top: 1rem;
 }
 
-@media (max-width: 687px) {
-  footer > div:nth-child(3),
-  footer > div:first-child {
-    width: 100%;
-    justify-content: center;
-  }
-
-  section .search-bar {
-    width: 90%;
-  }
+#main .material-icons {
+  font-size: 1.2rem;
 }
 
-@media (max-height: 630px) {
-  section {
-    margin-top: 0;
-  }
+/* SEARCH RESULTS SECTION */
+
+#main .search-results {
+  margin: 1.5rem 0;
+}
+
+#main .search-result {
+  padding-bottom: 1.5rem;
+}
+
+#main .search-result * {
+  padding-bottom: 0.2rem;
+}
+
+#main .search-result a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+#main .search-result a:visited {
+  color: purple;
+}
+
+#main .search-result .address {
+  display: flex;
+  align-items: center;
+  color: rgb(46, 46, 46);
+}
+
+/* PEOPLE ALSO ASK SECTION */
+
+#main .people-also-ask {
+  margin-bottom: 3rem;
+}
+
+#main .people-also-ask > div:first-child {
+  display: flex;
+}
+
+#main .also-ask-item {
+  list-style: inside;
+  position: relative;
+  border-bottom: 1px solid var(--lightgrey);
+}
+
+#main .also-ask-item input {
+  display: none;
+}
+
+#main .also-ask-item label {
+  display: block;
+  cursor: pointer;
+  padding: 0.7rem 0;
+}
+
+#main .also-ask-item .content {
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+
+/* Open on checked */
+#main .also-ask-item input:checked ~ .content {
+  max-height: 100vh;
+}
+
+#main .also-ask-item .accordian-btn {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font-size: 1.6rem;
+  z-index: -1;
+}
+
+#main .also-ask-item .accordian-btn:nth-child(5) {
+  display: none;
+}
+
+#main .also-ask-item input:checked ~ .accordian-btn:nth-child(5) {
+  display: block;
+}
+
+#main .also-ask-item input:checked ~ .accordian-btn:nth-child(4) {
+  display: none;
+}
+
+/* Content inside people also ask item */
+
+.also-ask-item .content h3 {
+  font-size: 16px;
+}
+
+.also-ask-item .content .snippet {
+  padding-top: 0.8rem;
+}
+
+.also-ask-item .content .snippet * {
+  padding-top: 0.5rem;
+}
+
+.also-ask-item .content > span:nth-child(2) {
+  font-size: 13px;
+  color: rgb(77, 77, 77);
+  display: block;
+  margin-top: 0.4rem;
+}
+
+.also-ask-item .content a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+.also-ask-item .content > a {
+  padding: 1rem 0;
+  display: block;
+}
+
+.also-ask-item .content a .address {
+  color: rgb(46, 46, 46);
+}
+
+.also-ask-item .content > div:last-child {
+  margin-bottom: 1rem;
 }
