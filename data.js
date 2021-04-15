@@ -123,13 +123,43 @@ const data = {
   relatedSearches: [
     {
       title: "Best website builder",
-      snippetHTML:
-        "<div><ul><li><span><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp-H7mbR1mOhVFdmxF3CyId4JuZORaJlkyFu2a&s=0%22' /></span><span>GoDaddy</span></li><li><span><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9y7v9prw0Gxl5geyjKKDcK2PdMqY6xoODCPc0AzrEmi-4zSpNbpfJRg&s=0' /></span><span>Squarespace</span></li><li><span><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7htTH7q8j-TGD3x7AgbahNzXLaSpkrCnCB-kI&s=0' /></span><span>Weebly</span></li><li><span><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTURCLyawZV5N54GZIjmoyPab78J3XSx7Q9J98N&s=0' /></span><span>Shopify</span></li><li><span><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwXS78aapUUrlxhwz1RHkyNACWju8qTLm30O0X&s=0' /></span><span>HostGator</span></li><li><span><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk90V_pfbbn46jKwj1vFXunJgunFDD69qB2ryt&s=0' /></span><span>Webflow</span></li></ul</div>",
+      snippetHTML: `
+      <div>
+        <ul>
+          <li>
+            <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp-H7mbR1mOhVFdmxF3CyId4JuZORaJlkyFu2a&s=0%22" /></div>
+            <div>GoDaddy</div>
+          </li>
+          <li>
+            <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9y7v9prw0Gxl5geyjKKDcK2PdMqY6xoODCPc0AzrEmi-4zSpNbpfJRg&s=0" /></div
+            ><div>Squarespace</div>
+          </li>
+          <li>
+            <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7htTH7q8j-TGD3x7AgbahNzXLaSpkrCnCB-kI&s=0" /></div><div>Weebly</div>
+          </li>
+          <li>
+            <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTURCLyawZV5N54GZIjmoyPab78J3XSx7Q9J98N&s=0" /></div><div>Shopify</div>
+          </li>
+          <li>
+            <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwXS78aapUUrlxhwz1RHkyNACWju8qTLm30O0X&s=0" /></div><div>HostGator</div>
+          </li>
+          <li>
+            <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk90V_pfbbn46jKwj1vFXunJgunFDD69qB2ryt&s=0" /></div><div>Webflow</div>
+          </li>
+        </ul>
+      </div>`,
     },
     {
       title: "Website builder",
-      snippetHTML:
-        "< class='info-box'><div><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGEOP_ND1LuMvY77gH6adKqabmJbwcQCDjFJLI&s=0' /><div><h3>Website Builder</h3><span>Software category</span></div></div><div>Website builders are tools that typically allow the construction of websites without manual code editing. They fall into two categories: online proprietary tools provided by web hosting companies. These are typically intended for users to build their private site. Wikipedia</div></div>",
+      snippetHTML: `<div class='info-box'>
+          <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGEOP_ND1LuMvY77gH6adKqabmJbwcQCDjFJLI&s=0' />
+          <div>
+            <h3>Website Builder</h3>
+            <span>Software category</span>
+          </div>
+          <div>Website builders are tools that typically allow the construction of websites without manual code editing. They fall into two categories: online proprietary tools provided by web hosting companies. These are typically intended for users to build their private site. Wikipedia
+          </div>
+        </div>`,
     },
   ],
   suggested: [

@@ -161,59 +161,10 @@ header .settings a {
 
 /* PEOPLE ALSO ASK SECTION */
 
-#main .people-also-ask {
-  margin-bottom: 3rem;
-}
-
 #main .people-also-ask > div:first-child {
   display: flex;
-}
-
-#main .also-ask-item {
-  list-style: inside;
-  position: relative;
   border-bottom: 1px solid var(--lightgrey);
-}
-
-#main .also-ask-item input {
-  display: none;
-}
-
-#main .also-ask-item label {
-  display: block;
-  cursor: pointer;
-  padding: 0.7rem 0;
-}
-
-#main .also-ask-item .content {
-  overflow: hidden;
-  transition: max-height 0.3s;
-  max-height: 0;
-}
-
-/* Open on checked */
-#main .also-ask-item input:checked ~ .content {
-  max-height: 100vh;
-}
-
-#main .also-ask-item .accordian-btn {
-  position: absolute;
-  top: 10px;
-  right: 0;
-  font-size: 1.6rem;
-  z-index: -1;
-}
-
-#main .also-ask-item .accordian-btn:nth-child(5) {
-  display: none;
-}
-
-#main .also-ask-item input:checked ~ .accordian-btn:nth-child(5) {
-  display: block;
-}
-
-#main .also-ask-item input:checked ~ .accordian-btn:nth-child(4) {
-  display: none;
+  padding-bottom: 0.8rem;
 }
 
 /* Content inside people also ask item */
@@ -253,4 +204,251 @@ header .settings a {
 
 .also-ask-item .content > div:last-child {
   margin-bottom: 1rem;
+}
+
+/*****************
+  RELATED SEARCH SECTION
+*****************/
+
+#related {
+  margin-bottom: 2rem;
+}
+
+.related-searches > div:first-child {
+  display: flex;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--lightgrey);
+}
+
+.related-search-item ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.related-search-item li > div:first-child {
+  background: rgb(240, 240, 240);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0 5px;
+}
+
+.related-search-item li > div:nth-child(2) {
+  padding: 0.5rem 0 0.5rem 0.75rem;
+}
+
+.related-search-item .info-box {
+  border: 1px solid var(--lightgrey);
+  border-radius: 10px;
+}
+
+.related-search-item .info-box img {
+  border-radius: 5px;
+  border: 1px solid var(--lightgrey);
+  margin: 0.75rem 0 0 0.75rem;
+}
+
+.related-search-item .info-box > div {
+  margin: 0.75rem;
+}
+
+.related-search-item .info-box > div:nth-child(2) {
+  border-top: 1px solid var(--lightgrey);
+  padding-top: 0.75rem;
+}
+
+/* ACCORDIAN ITEMS */
+
+.accordian-item {
+  list-style: inside;
+  position: relative;
+  border-bottom: 1px solid var(--lightgrey);
+}
+
+.accordian-item:last-child {
+  border: none;
+}
+
+.accordian-item input {
+  display: none;
+}
+
+.accordian-item label {
+  display: block;
+  cursor: pointer;
+  padding: 0.7rem 0;
+}
+
+.accordian-item .content {
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+
+/* Open on checked */
+.accordian-item input:checked ~ .content {
+  max-height: 100vh;
+}
+
+.accordian-item .accordian-btn {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font-size: 1.6rem;
+  z-index: -1;
+}
+
+.accordian-item .accordian-btn:nth-child(5) {
+  display: none;
+}
+
+.accordian-item input:checked ~ .accordian-btn:nth-child(5) {
+  display: block;
+}
+
+.accordian-item input:checked ~ .accordian-btn:nth-child(4) {
+  display: none;
+}
+
+.accordian-item .accordian-btn {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font-size: 1.6rem;
+  z-index: -1;
+}
+
+.related-search-item .accordian-btn:nth-child(5) {
+  display: none;
+}
+
+.related-search-item input:checked ~ .accordian-btn:nth-child(5) {
+  display: block;
+}
+
+.related-search-item input:checked ~ .accordian-btn:nth-child(4) {
+  display: none;
+}
+
+/* SUGGESTED SEARCHES */
+
+.suggested-searches {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 1rem;
+  margin-bottom: 3rem;
+}
+
+.suggested-search-item {
+  display: flex;
+  align-items: center;
+  background-color: rgb(233, 233, 233);
+  border-radius: 50px;
+}
+
+.suggested-search-item span {
+  padding: 0.75rem 1.25rem;
+}
+
+.suggested-search-item a {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding-right: 1.25rem;
+}
+
+/* FEEDBACK BAR */
+
+.feedback {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-bottom: 3rem;
+}
+
+.feedback > span {
+  width: 100%;
+  height: 1px;
+  background: rgb(193, 193, 193);
+}
+
+.feedback > a {
+  margin-left: 0.75rem;
+  color: rgb(101, 101, 101);
+}
+
+/****************
+  PAGINATION
+*****************/
+
+.pagination {
+  margin-bottom: 3rem;
+}
+
+.pagination-box {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-box img {
+  width: 200px;
+  margin: -20px;
+}
+
+.pagination-box .left-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pagination-box .right-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 1rem;
+  color: rgb(1, 102, 225);
+}
+
+.pagination-box .right-box > span {
+  align-self: center;
+  padding-top: 1rem;
+}
+
+.pagination-box .numbers a {
+  padding: 0 0.2rem;
+  color: rgb(1, 102, 225);
+}
+
+/*************
+  FOOTER
+**************/
+
+footer {
+  background: rgb(240, 240, 240);
+}
+
+footer .inner-container {
+  padding: 2rem 0;
+}
+
+footer .inner-container > div:first-child {
+  padding-bottom: 1rem;
+}
+
+footer .inner-container > div:first-child::before {
+  content: "\2022";
+  font-size: 2rem;
+  color: rgb(101, 101, 101);
+  position: relative;
+  top: 5px;
+  padding-right: 5px;
+}
+
+footer .inner-container > div:nth-child(2) > a {
+  padding-right: 1.3rem;
+  color: grey;
 }
